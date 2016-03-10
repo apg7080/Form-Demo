@@ -47,7 +47,7 @@
 
 
 <div class="docs-code-live"><form data-abide="xvb89y-abide" novalidate="">
-  <div data-abide-error="" class="alert callout" style="display: block;">
+  <div data-abide-error="" class="alert callout" style="display: none;">
     <p><i class="fi-alert"></i> There are some errors in your form.</p>
   </div>
   <div class="row">
@@ -75,8 +75,8 @@
 	
 	<div class="medium-6 columns">
       <label class="is-invalid-label">
-        <input type="password" id="password" placeholder="Enter Password" required="" class="is-invalid-input" data-invalid="">
-        <span class="form-error is-visible">
+        <input type="password" id="password" placeholder="Enter Password" required="" data-invalid="">
+        <span class="form-error">
           Password Needed
         </span>
       </label>
@@ -88,8 +88,8 @@
     
     <div class="medium-6 columns">
       <label class="is-invalid-label">
-        <input type="password" placeholder="Re-Enter Password" required="" pattern="alpha_numeric" data-equalto="password" class="is-invalid-input" data-invalid="">
-        <span class="form-error is-visible">
+        <input type="password" placeholder="Re-Enter Password" required="" pattern="alpha_numeric" data-equalto="password" data-invalid="">
+        <span class="form-error">
           Passwords must match!
         </span>
       </label>
@@ -108,14 +108,23 @@
     <div class="row">
         <fieldset class="large-12 columns">
       
-      <input id="checkbox1" type="checkbox"><label for="checkbox1">Yes I agree to the Terms & Conditions</label> <a href="http://www.theguardian.com/commentisfree/2014/apr/24/terms-and-conditions-online-small-print-information">Read</a>
+      <input id="checkbox1" type="checkbox"><label for="checkbox1">Yes I agree to the Terms & Conditions
+      <span class="form-error">
+          You must accept the ToS.
+        </span>
+      
+      </label>
+      
+      <a href="http://www.theguardian.com/commentisfree/2014/apr/24/terms-and-conditions-online-small-print-information">Read</a>
     </fieldset>
     
    
   </div>
   <div class="row">
     <fieldset class="small-3 columns">
-      <button class="button" type="submit" value="Submit">Submit</button>
+      <button class="button" type="submit" value="Submit" href="http://google.com" required>Submit</button>
+      
+
     </fieldset>
   </div>
 
@@ -131,7 +140,7 @@
 
 
 
-
+<script>$(document).foundation();</script>
 </body>
 
 </html>
